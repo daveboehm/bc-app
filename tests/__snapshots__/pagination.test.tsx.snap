@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> happy path should render and match snapshot 1`] = `
+<div>
+  <div
+    class="paginationContainer"
+  >
+    <div
+      class="buttonsContainer"
+    >
+      <button
+        class="pageButtonInactive"
+        data-testid="pagination-prev-button"
+        type="button"
+      >
+        Prev
+      </button>
+      <button
+        class="pageButtonInactive"
+        data-testid="pagination-button"
+        type="button"
+      >
+        1
+      </button>
+      <button
+        class="pageButtonInactive"
+        data-testid="pagination-button"
+        type="button"
+      >
+        2
+      </button>
+      <button
+        class="pageButtonActive"
+        data-testid="pagination-button"
+        type="button"
+      >
+        3
+      </button>
+      <button
+        class="pageButtonInactive"
+        data-testid="pagination-next-button"
+        disabled=""
+        type="button"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+`;

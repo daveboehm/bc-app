@@ -32,3 +32,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Local Installation Instructions
+
+1. clone the repo `$ git clone github.com/daveboehm:git/bc-app`
+2. `$ cd bc-app`
+3. `$ npm i && npm run dev`
+4. In a browser, goto [localhost:3000](http://localhost:3000/)
+5. Read my comments there if you'd like, then click the "Go To App" button
+6. ???
+7. Profit
+
+## Running tests
+
+1. Install the app as described above
+2. run `$ npm run test` to run everything in the `/tests` dir
+3. For coverage, run `$ npm run test:cov`, visit `file:///{{your-local-dir}}/bc-app/coverage/lcov-report/index.html` Please note I did not attempt to hit a coverage threshold, so this will look bad

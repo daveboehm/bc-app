@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EntryItem /> happy path should match snapshot 1`] = `
+<div>
+  <li
+    class="entryItem"
+    data-testid="entry-item"
+  >
+    <a
+      class="entryItemLink"
+      href="https://www.heatpresszone.com/"
+      target="_blank"
+      title="https://www-cdn.bigcommerce.com/assets/Heat-Press-Zone.png"
+    >
+      <div
+        class="entryImage"
+      >
+        <img
+          alt="Heat Press Zone"
+          src="https://www-cdn.bigcommerce.com/assets/Heat-Press-Zone.png"
+        />
+      </div>
+      <h2
+        class="entryTitle"
+      >
+        Heat Press Zone
+      </h2>
+    </a>
+  </li>
+</div>
+`;

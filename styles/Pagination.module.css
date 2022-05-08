@@ -1,0 +1,47 @@
+.paginationContainer {
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    --nice: #696969;
+    --uiBorder: #abc;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-self: space-around;
+}
+
+.pageButtonActive {
+    font-size: 2rem;
+    background-color: var(--nice);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 2px;
+}
+
+.pageButtonInactive {
+    font-size: 2rem;
+    background-color: #fff;
+    color: #777;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--uiBorder);
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.pageButtonInactive:hover,
+.pageButtonInactive:focus {
+    background-color: var(--uiBorder);
+    color: #111;
+    transition: 150ms;
+}
+
+.pageButtonInactive:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
