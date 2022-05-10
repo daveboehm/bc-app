@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { EntryItem } from '../../components/entry-item'
-import { Pagination } from '../../components/pagination'
+import EntryItem from '../../components/entry-item'
+import Pagination from '../../components/pagination'
 import type { EntriesPropsType } from "../../utils/types"
 import styles from '../../styles/Entry.module.css'
 import { ENTRIES_URL, ENTRY_URL, ITEMS_PER_PAGE } from "../../utils/constants"
