@@ -1,9 +1,9 @@
 import React from 'react'
 import { cleanup, render, screen, RenderResult } from "@testing-library/react";
-import { EntriesPropsType } from '../pages/types';
+import { EntriesPropsType } from '../utils/types';
 import { MOCK_ENTRIES_PAGE_PROPS } from './__fixtures__/mock-data';
 import Entries from '../pages/entries';
-import { ITEMS_PER_PAGE } from '../pages/constants';
+import { ITEMS_PER_PAGE } from '../utils/constants';
 
 describe("<EntriesPage />", () => {
 

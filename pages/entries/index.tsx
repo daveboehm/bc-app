@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { EntryItem } from '../components/entry-item'
-import { Pagination } from '../components/pagination'
-import type { EntriesPropsType } from "../types"
+import { EntryItem } from '../../components/entry-item'
+import { Pagination } from '../../components/pagination'
+import type { EntriesPropsType } from "../../utils/types"
 import styles from '../../styles/Entry.module.css'
-import { ENTRIES_URL, ENTRY_URL, ITEMS_PER_PAGE } from "../constants"
+import { ENTRIES_URL, ENTRY_URL, ITEMS_PER_PAGE } from "../../utils/constants"
 
 const Entries: NextPage | any = (props: EntriesPropsType) => {
     const { entryIds, hydratedEntries = [] } = props;
@@ -57,7 +57,7 @@ const Entries: NextPage | any = (props: EntriesPropsType) => {
 // --------------
 // Data Fetchin
 // --------------
-export const handleFetchError = (err: any) => {
+export const handleError = (err: any) => {
     console.error(err)
     // probablySendToErrorLoggerService("ListingPage", err)
 }
@@ -67,7 +67,7 @@ export async function getStaticProps() {
 
     // Fetch entry IDs
     const entriesResponse = await fetch(ENTRIES_URL, DEFAULT_ALL_THE_THINGS)
-    if (!entriesResponse.ok) throw new Error("Klingons are boarding the ship, captain")
+    if (!entriesResponse.ok) throw new Error("Super bad error you should totally care about")
     const entryIds: string[] = await entriesResponse.json()
 
     // 
@@ -78,8 +78,10 @@ export async function getStaticProps() {
     })
     
     // Resolve each entryById, remove bad eggs
-    const hydratedEntries = await Promise.all(entriesPromises).then(allEntries => allEntries.filter(foo => foo !== null))
-
+    const hydratedEntries = await Promise.all(entriesPromises)
+        .then(allEntries => allEntries.filter(noNulls => noNulls !== null))
+        .catch(handleError)
+    
     return { props: { entryIds, hydratedEntries } }
 }
 

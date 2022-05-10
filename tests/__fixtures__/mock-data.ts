@@ -1,4 +1,4 @@
-import { EntriesPropsType, EntryType, PaginationProps } from "../../pages/types";
+import { EntriesPropsType, EntryType, PaginationProps } from "../../utils/types";
 
 export const MOCK_ENTRY_PROPS: EntryType = {
     description: "",

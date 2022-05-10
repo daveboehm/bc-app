@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, RenderResult } from "@testing-library/react";
-import { EntryItem } from '../pages/components/entry-item';
-import { EntryType } from '../pages/types';
+import { EntryItem } from '../components/entry-item';
+import { EntryType } from '../utils/types';
 import { MOCK_ENTRY_PROPS } from './__fixtures__/mock-data';
 
 describe("<EntryItem />", () => {

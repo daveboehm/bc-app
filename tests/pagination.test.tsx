@@ -1,8 +1,8 @@
 import React from 'react'
 import { cleanup, render, screen, RenderResult } from "@testing-library/react";
-import { PaginationProps } from '../pages/types';
+import { PaginationProps } from '../utils/types';
 import { MOCK_PAGINATION_PROPS } from './__fixtures__/mock-data';
-import { Pagination } from '../pages/components/pagination';
+import { Pagination } from '../components/pagination';
 
 describe("<Pagination />", () => {
 
