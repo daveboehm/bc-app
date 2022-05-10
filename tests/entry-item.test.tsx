@@ -20,11 +20,10 @@ describe("<EntryItem />", () => {
             expect(view.container).toMatchSnapshot()
         });
 
-        it("should use the correct alt text and src url", () => {
+        it("should use the correct alt text", () => {
             const theImage = screen.getByRole("img")
             expect(theImage).toBeVisible()
             expect(theImage).toHaveAttribute("alt", props.image.title)
-            expect(theImage).toHaveAttribute("src", props.image.url)
         })
 
         it("should use the correct link url", () => { 

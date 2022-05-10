@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import type { PaginationProps } from "../../utils/types"
 import { ITEMS_PER_PAGE } from "../../utils/constants"
-import styles from '../styles/Pagination.module.css'
+import styles from '../../styles/Pagination.module.css'
 
 export const Pagination = (props: PaginationProps) => {
     const {
